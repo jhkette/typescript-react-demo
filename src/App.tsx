@@ -11,13 +11,12 @@ function App() {
   const addItem = (product: string, quantity: string) => {
     setItems([...items, { id: getId(), product, quantity }]);
   };
-  //   const items = [
-  //     {id:1, product: "lemon", quantity: 3},
-  //     {id:1, product: "appe", quantity: 3}
-  // ]
+
   return (
     <div className="App">
+      {/* shopping list form */}
       <ShoppingListForm onAddItem={addItem} />
+      {/* shopping list list */}
       <ShoppingList items={items} />
     </div>
   );
