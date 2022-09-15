@@ -7,8 +7,9 @@ import { v4 as getId } from "uuid";
 import ShoppingListForm from "./components/ShoppingListForm";
 
 function App() {
+  // use item generic for useState - use state will have an array of items
   const [items, setItems] = useState<Item[]>([]);
-  const addItem = (product: string, quantity: string) => {
+  const addItem = (product: string, quantity: string): void => {
     setItems([...items, { id: getId(), product, quantity }]);
   };
 

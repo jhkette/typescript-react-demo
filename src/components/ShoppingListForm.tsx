@@ -3,7 +3,9 @@ import { ShoppingListFormProps } from "../models/item";
 
 
 export default function ShoppingListForm({onAddItem}: ShoppingListFormProps): JSX.Element {
+    // generic again HTMLInputElement
   const inputRef = useRef<HTMLInputElement>(null);
+   // generic again HTMLInputElement
   const quantityRef = useRef<HTMLInputElement>(null);
   
   function handleSubmit(e: React.FormEvent) {
